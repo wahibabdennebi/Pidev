@@ -15,6 +15,7 @@
 	<description>tp-spring-boot</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -36,6 +37,31 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            </dependency>
+            <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope> runtime</scope>
+            </dependency>
+            <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+</dependency>
+			<dependency>
+			    <groupId>com.paypal.sdk</groupId>
+			    <artifactId>rest-api-sdk</artifactId>
+			    <version>1.14.0</version>
+			</dependency>
+									<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+						<dependency>
+						    <groupId>org.projectlombok</groupId>
+						    <artifactId>lombok</artifactId>
+						    <scope>provided</scope>
+						</dependency>
+			
 	</dependencies>
 
 	<build>

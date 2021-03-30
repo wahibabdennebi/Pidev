@@ -1,22 +1,44 @@
 package tp.spring.boot.piedvdari.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @SuppressWarnings("serial")
 @Entity
 public class Furniture implements Serializable {
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int furniture_id ;
 	private int price;
 	private String description;
+	private String titre;
+	private boolean state= true;	
+	//@JsonBackReference
+	@JsonManagedReference
 	@ManyToOne
+	@JoinColumn(name ="id_client")
 	private Costumer costumer;
-	@ManyToOne
-	private Order order;
+	@JsonBackReference
+	@OneToMany(mappedBy = "furniture")
+	private List<Order> orders;
+	@JsonBackReference
+	@OneToMany(mappedBy="furnitures",cascade = CascadeType.REMOVE,fetch = FetchType.EAGER)
+	private List<ImageModel> listImages;
 	public int getFurniture_id() {
 		return furniture_id;
 	}
@@ -38,6 +60,53 @@ public class Furniture implements Serializable {
 	public Furniture() {
 		super();
 	}
+	public String getTitre() {
+		return titre;
+	}
+	public void setTitre(String titre) {
+		this.titre = titre;
+	}
+	
+	public boolean isState() {
+		return state;
+	}
+	public void setState(boolean state) {
+		this.state = state;
+	}
+	
+	public Costumer getCostumer() {
+		return costumer;
+	}
+	public void setCostumer(Costumer costumer) {
+		this.costumer = costumer;
+	}
+	public List<Order> getOrders() {
+		return orders;
+	}
+	public List<ImageModel> getListImages() {
+		return listImages;
+	}
+	public void setOrders(List<Order> orders) {
+		this.orders = orders;
+	}
+	public void setListImages(List<ImageModel> listImages) {
+		this.listImages = listImages;
+	}
+	public Furniture(int furniture_id, int price, String description, String titre, boolean state) {
+		super();
+		this.furniture_id = furniture_id;
+		this.price = price;
+		this.description = description;
+		this.titre = titre;
+		this.state = state;
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 
 }

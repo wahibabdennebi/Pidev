@@ -1,10 +1,14 @@
 package tp.spring.boot.piedvdari.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
+
+
+
 @SuppressWarnings("serial")
 @Entity
 public class Shooping_Card implements Serializable {
@@ -12,8 +16,9 @@ public class Shooping_Card implements Serializable {
 	private int id_card;
 	private int total_card;
 	private int total_price;
-	@OneToOne
-	private Order order;
+	@OneToMany(mappedBy = "shopping")
+	private List<Order> orders ;
+	
 	public Shooping_Card() {
 		super();
 		// TODO Auto-generated constructor stub

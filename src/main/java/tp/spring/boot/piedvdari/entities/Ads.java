@@ -2,16 +2,22 @@ package tp.spring.boot.piedvdari.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @SuppressWarnings("serial")
 @Entity
@@ -34,6 +40,8 @@ public class Ads implements Serializable {
 	private City city;
 	@ManyToOne
 	private User user;
+	@OneToMany(mappedBy ="ads")
+	private List<Claim>claims ;
 	public int getId_ad() {
 		return id_ad;
 	}
