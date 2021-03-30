@@ -1,10 +1,12 @@
 package tp.spring.boot.piedvdari.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @SuppressWarnings("serial")
 @Entity
@@ -15,8 +17,8 @@ public class Furniture implements Serializable {
 	private String description;
 	@ManyToOne
 	private Costumer costumer;
-	@ManyToOne
-	private Order order;
+	@OneToMany(mappedBy="furniture")
+	private List <Order> ordres;
 	public int getFurniture_id() {
 		return furniture_id;
 	}
