@@ -27,6 +27,7 @@ public class Favorite_Ads implements Serializable {
 	
 	@Temporal(TemporalType.DATE)
 	private Date fav_ad_date = new Date (System.currentTimeMillis());
+	
 	private  boolean states = true ;
 	
 	

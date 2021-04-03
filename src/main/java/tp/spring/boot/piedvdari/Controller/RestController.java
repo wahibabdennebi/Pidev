@@ -141,4 +141,9 @@ public class RestController {
 		headers.add("Content-disposition ", "inline;filename =Ads.Pdf");
 		return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_PDF).body(new InputStreamResource(bais));
 	 }
+	 @GetMapping("/Estimated/{room}/{s}")
+	 public ResponseEntity<?> EstimatedPrice(@PathVariable("room") int room ,@PathVariable("s")Type_ads s ){
+		 int [] price= serviceads.EstimatedPrice(room ,s);
+		 return new ResponseEntity<>(price,HttpStatus.OK);
+	 }
 }

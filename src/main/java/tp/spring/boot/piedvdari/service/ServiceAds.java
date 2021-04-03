@@ -27,6 +27,7 @@ public interface ServiceAds {
 	public  String addOneDay(String date);
 	public void findFav(int a);
 	public List<Favorite_Ads> searchfav (User user,Ads ad);
+	public int[] EstimatedPrice(int room ,Type_ads s );
 
 
 }
