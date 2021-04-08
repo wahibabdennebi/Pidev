@@ -33,6 +33,7 @@ public class Ads implements Serializable {
 	private String adress;
 	private int area;
 	private int room ;
+	private int num_Claim=0;
 	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date creationdate;
 	@Enumerated(EnumType.STRING)
@@ -46,7 +47,8 @@ public class Ads implements Serializable {
 	private User user;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="ad", fetch=FetchType.LAZY)
 	private List<Favorite_Ads> listeFavorite;
-	
+	@OneToMany(mappedBy ="ads")
+	private List<Claim>claims ;
 	public int getId_ad() {
 		return id_ad;
 	}
@@ -91,7 +93,12 @@ public class Ads implements Serializable {
 	public void setRoom(int room) {
 		this.room = room;
 	}
-	
+	public int getNum_Claim() {
+		return num_Claim;
+	}
+	public void setNum_Claim(int num_Claim) {
+		this.num_Claim = num_Claim;
+	}
 	
 	
 	
@@ -112,7 +119,7 @@ public class Ads implements Serializable {
 	}
 	
 
-	
+		
 	public Ads(int id_ad, String title, String description, int price, String adress, int area, int room,
 			Date creationdate, Type_ads type_ads, Category category, City city, User user) {
 		super();
@@ -166,8 +173,6 @@ public class Ads implements Serializable {
 		this.user = user;
 		this.listeFavorite = listeFavorite;
 	}
-	
-	
 
 	
 	
