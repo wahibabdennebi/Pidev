@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,31 +26,34 @@ public class Furniture implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int furniture_id ;
-	private int price;
+	private Long price;
 	private String description;
 	private String titre;
 	private boolean state= true;	
-	//@JsonBackReference
-	@JsonManagedReference
+	@Enumerated(EnumType.STRING)
+	private Type type;
 	@ManyToOne
+	@JsonIgnore
 	@JoinColumn(name ="id_client")
 	private Costumer costumer;
-	@JsonBackReference
+	@JsonIgnore
 	@OneToMany(mappedBy = "furniture")
 	private List<Order> orders;
-	@JsonBackReference
+	
 	@OneToMany(mappedBy="furnitures",cascade = CascadeType.REMOVE,fetch = FetchType.EAGER)
 	private List<ImageModel> listImages;
+	
+	
 	public int getFurniture_id() {
 		return furniture_id;
 	}
 	public void setFurniture_id(int furniture_id) {
 		this.furniture_id = furniture_id;
 	}
-	public int getPrice() {
+	public Long getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(Long price) {
 		this.price = price;
 	}
 	public String getDescription() {
@@ -92,13 +97,21 @@ public class Furniture implements Serializable {
 	public void setListImages(List<ImageModel> listImages) {
 		this.listImages = listImages;
 	}
-	public Furniture(int furniture_id, int price, String description, String titre, boolean state) {
+	
+	public Type getType() {
+		return type;
+	}
+	public void setType(Type type) {
+		this.type = type;
+	}
+	public Furniture(int furniture_id, Long price, String description, String titre, boolean state,Type type) {
 		super();
 		this.furniture_id = furniture_id;
 		this.price = price;
 		this.description = description;
 		this.titre = titre;
 		this.state = state;
+		this.type = type;
 	}
 	
 	

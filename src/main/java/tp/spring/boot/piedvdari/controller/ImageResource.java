@@ -9,12 +9,15 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import tp.spring.boot.piedvdari.entities.Furniture;
 import tp.spring.boot.piedvdari.entities.ImageModel;
+import tp.spring.boot.piedvdari.service.IimageService;
 import tp.spring.boot.piedvdari.service.ImageService;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -22,7 +25,7 @@ import tp.spring.boot.piedvdari.service.ImageService;
 public class ImageResource {
 	
 	@Autowired
- public ImageService imageService;
+ public IimageService imageService;
 	
 	
 	public ImageResource(ImageService imageService) {

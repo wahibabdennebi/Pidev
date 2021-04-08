@@ -1,11 +1,12 @@
 package tp.spring.boot.piedvdari.entities;
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "image_table")
 public class ImageModel {
-		@Id
+		 @Id
 	     @Column(name = "id")
 	     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	     private Long id;
@@ -15,6 +16,7 @@ public class ImageModel {
 	     private String type;
 	     @Column(name = "picByte", length = 1000)
 	     private byte[] picByte;
+	     @JsonIgnore
 	     @ManyToOne(cascade = CascadeType.PERSIST)
 	     private Furniture furnitures;
 		public Long getId() {

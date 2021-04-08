@@ -1,5 +1,7 @@
 package tp.spring.boot.piedvdari.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,15 +28,43 @@ public class ClaimService implements IClaimService {
 		Ads a= adsRepository.findById(ads_id).orElse(null);
 		Costumer cos= costmerRepository.findById(costumer_id).orElse(null);
 		c.setCostumer(cos);
+		a.setNum_Claim(a.getNum_Claim()+1);
 		c.setAds(a);
+		adsRepository.save(a);
 		return 	claimRepository.save(c);
 	}
 
 	@Override
-	public Claim addClaim2(Claim c) {
-		// TODO Auto-generated method stub
-		return 	claimRepository.save(c);
+	public void  deleteClaim(int id) {
+		 claimRepository.deleteById(id);
+		// Claim c= claimRepository.findById(id).orElse(null);
+		 
 	}
+
+	@Override
+	public List<Claim> findAllClaims() {
+		return	claimRepository.findAll();
+ 
+	}
+
+	@Override
+	public Claim updateClaim(Claim claim) {
+		return claimRepository.save(claim);
+	}
+
+	@Override
+	public List<Claim> getAllClaimByCostumerId(int id) {
+		List<Claim> listClaims= costmerRepository.findById(id).orElse(null).getListclaim();
+		return listClaims;
+	}
+
+	@Override
+	public void deleteAllClaim() {
+		claimRepository.deleteAll();
+		
+	}
+
+	
 	
 
 }

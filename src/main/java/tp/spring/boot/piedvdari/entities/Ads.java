@@ -31,6 +31,7 @@ public class Ads implements Serializable {
 	private String adress;
 	private int area;
 	private int room ;
+	private int num_Claim=0;
 	@Temporal(TemporalType.DATE)
 	private Date creationdate;
 	private String type_ads;
@@ -113,6 +114,12 @@ public class Ads implements Serializable {
 	}
 	public void setCity(City city) {
 		this.city = city;
+	}
+	public int getNum_Claim() {
+		return num_Claim;
+	}
+	public void setNum_Claim(int num_Claim) {
+		this.num_Claim = num_Claim;
 	}
 
 	

@@ -1,6 +1,11 @@
 package tp.spring.boot.piedvdari.entities;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @SuppressWarnings("serial")
@@ -11,6 +16,10 @@ public class Admin extends User {
 	private int id_admin;
 	private String login;
 	private String password_admin;
+	
+	@OneToMany(mappedBy="admins")
+	private List<Promotion> promtion;
+	
 	public int getId_admin() {
 		return id_admin;
 	}

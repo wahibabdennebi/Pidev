@@ -9,21 +9,22 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @SuppressWarnings("serial")
 @Entity
 public class Claim implements Serializable {
 	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private int id_Claim;
+	
 	private String description;
 	@ManyToOne
-	@JsonBackReference
+	@JsonIgnore
 	private Costumer costumer;
 	
 	@ManyToOne
-	@JsonBackReference
 	private Ads ads;
 	
 	public Claim() {
@@ -42,9 +43,11 @@ public class Claim implements Serializable {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	@JsonBackReference(value="testt")
 	public Costumer getCostumer() {
 		return costumer;
 	}
+	@JsonBackReference(value="test")
 	public Ads getAds() {
 		return ads;
 	}
@@ -60,6 +63,7 @@ public class Claim implements Serializable {
 		this.costumer = costumer;
 		this.ads = ads;
 	}
+	
 	
 	
 	

@@ -13,8 +13,13 @@ import org.springframework.stereotype.Service;
 import tp.spring.boot.piedvdari.entities.Costumer;
 import tp.spring.boot.piedvdari.entities.Furniture;
 import tp.spring.boot.piedvdari.entities.ImageModel;
+import tp.spring.boot.piedvdari.entities.Order;
+import tp.spring.boot.piedvdari.entities.Promotion;
+import tp.spring.boot.piedvdari.entities.Type;
 import tp.spring.boot.piedvdari.repository.ICostmerRepository;
 import tp.spring.boot.piedvdari.repository.IFurnitureRepository;
+import tp.spring.boot.piedvdari.repository.IOrderRepository;
+import tp.spring.boot.piedvdari.repository.IPromtionRepository;
 @Service
 public class FornitureService implements IFornitureService{
 	@Autowired
@@ -23,8 +28,13 @@ public class FornitureService implements IFornitureService{
 	public ICostmerRepository costmerRepository;
 	@Autowired 
 	public ImageService imageService ;
-	
-	
+	@Autowired
+	IPromtionRepository promtionRep;
+	@Autowired
+	IOrderRepository orderRepo;
+	@Autowired
+	IPaymentService paymentService;
+	 
 	@Override
 	public Furniture addForniture(Furniture f) {
 		
@@ -36,6 +46,7 @@ public class FornitureService implements IFornitureService{
 	public Furniture addForniture2(int id,Furniture f) {
 		Costumer costumer = costmerRepository.getOne(id);
 		f.setCostumer(costumer);
+		
 		return furnitureRepository.save(f);
 		
 	}
@@ -66,9 +77,9 @@ public class FornitureService implements IFornitureService{
 
 
 	@Override
-	public Optional<Furniture> findFurniture(int id) {
+	public Furniture findFurniture(int id) {
 		
-		return furnitureRepository.findById(id);
+		return furnitureRepository.findById(id).orElse(null);
 				}
 
 
@@ -105,10 +116,10 @@ public class FornitureService implements IFornitureService{
 	}
 		
 		@Override
-		public int getPrice(int furniture_id, int id_client) {
+		public Long getPrice(int furniture_id, int id_client) {
 			Costumer costumer=costmerRepository.getOne(id_client);
 			Furniture furniture=furnitureRepository.getOne(furniture_id);
-			int price =furniture.getPrice();
+			Long price =furniture.getPrice();
 			if (costumer.getPoint_fid()>=100) {
 			return	price =price-((price *10)/100);
 				
@@ -139,6 +150,34 @@ public class FornitureService implements IFornitureService{
 			 }*/
 			 return ListImages;
 			
+		}
+
+		@Override
+		public List<Furniture> findByType(Type t) {
+			// TODO Auto-generated method stub
+			return furnitureRepository.findByType(t);
+		}
+		@Override
+		public List<Furniture> exuterpromotion(int id) {
+			Promotion p= promtionRep.findById(id).orElse(null);
+			Type t=p.getType();
+			int value=p.getValue();
+			//List<Furniture>nlistfur=new ArrayList<>();
+			List<Furniture> F= furnitureRepository.findByType(t.Accesoires);
+			/*for(Furniture f:F) {
+				int price = f.getPrice();
+				price =((price*value)/100);
+				f.setPrice(price);
+				nlistfur.add(f);
+			}*/
+			return F;
+		}
+
+		@Override
+		public Order addorder(int idfurniture) {
+			Order o= new Order();
+			o.setFurniture(findFurniture(idfurniture));	
+			return orderRepo.save(o);
 		}
 	
 }

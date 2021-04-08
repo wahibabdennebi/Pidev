@@ -9,6 +9,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import org.springframework.context.annotation.Lazy;
+import org.springframework.data.repository.cdi.Eager;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -16,6 +19,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @SuppressWarnings("serial")
 @Entity
+@Eager
 public class Costumer extends User {
 
 	private int id_client;
@@ -28,12 +32,10 @@ public class Costumer extends User {
 	private List<Visit> listevisit;
 	@OneToMany(mappedBy = "costumer")
 	private List<Borrower> listBorrow;
-	@OneToMany(mappedBy = "costumer")
-	
+	@OneToMany(mappedBy = "costumer")//fetch = FetchType.EAGER)
 	private List<Claim>  listclaim;
-	@JsonBackReference
+	
 	@OneToMany(mappedBy = "costumer",fetch = FetchType.EAGER)
-	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private List<Furniture> listfurniture;
 	public int getId_client() {
 		return id_client;
