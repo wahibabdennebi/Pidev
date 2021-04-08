@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+
 import tp.spring.boot.piedvdari.entities.Ads;
 import tp.spring.boot.piedvdari.entities.Category;
 import tp.spring.boot.piedvdari.entities.City;
@@ -18,16 +20,17 @@ public interface ServiceAds {
 	public  List<Ads> FindallAds();
 	public Ads updateAds(Ads u);
 	public Optional<Ads>findAdsbyId(int id);
-	public User ajouterUser(User b);
 	public List<Ads> search (String title,Category category,City city,Type_ads type_ads);
-	public List<User> FindallUser();
-	public void ajouterFavorite(Favorite_Ads f);
-	public List<Favorite_Ads> FindallFavorite();
-	public void deleteFavAd(int d);
-	public  String addOneDay(String date);
-	public void findFav(int a);
-	public List<Favorite_Ads> searchfav (User user,Ads ad);
-	public int[] EstimatedPrice(int room ,Type_ads s );
-
+	public  Page<Ads> Findpagination(int pageSize, int pageNumber);
+	//public List<User> FindallUser();
+	//public void ajouterFavorite(Favorite_Ads f);
+	//public List<Favorite_Ads> FindallFavorite();
+	//public void deleteFavAd(int d);
+	//public  String addOneDay(String date);
+	//public void findFav(int a);
+	//public List<Favorite_Ads> searchfav (User user,Ads ad);
+	//public int[] EstimatedPrice(int room ,Type_ads s );
+	//public User ajouterUser(User b);
+	
 
 }

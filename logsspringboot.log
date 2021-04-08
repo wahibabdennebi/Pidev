@@ -1,25 +1,22 @@
-2021-04-03 00:53:27.114  WARN 16028 --- [HikariPool-55 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-55 - Thread starvation or clock leap detected (housekeeper delta=2d12h3m43s2ms990µs700ns).
-2021-04-03 00:54:15.009  WARN 16028 --- [HikariPool-55 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-55 - Thread starvation or clock leap detected (housekeeper delta=49s176ms104µs400ns).
-2021-04-03 04:43:48.536  WARN 16028 --- [HikariPool-55 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-55 - Thread starvation or clock leap detected (housekeeper delta=3h30s553ms732µs900ns).
-2021-04-03 21:39:01.973  WARN 16028 --- [HikariPool-55 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-55 - Thread starvation or clock leap detected (housekeeper delta=16h55m30s526ms446µs300ns).
-2021-04-03 21:51:04.983  INFO 16028 --- [Thread-274] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-03 21:51:04.986  INFO 16028 --- [Thread-274] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-04-03 21:51:05.006  INFO 16028 --- [Thread-274] com.zaxxer.hikari.HikariDataSource       : HikariPool-55 - Shutdown initiated...
-2021-04-03 21:51:05.046  INFO 16028 --- [Thread-274] com.zaxxer.hikari.HikariDataSource       : HikariPool-55 - Shutdown completed.
-2021-04-03 21:51:06.765  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : Starting PiedvDariApplication using Java 1.8.0_241 on DESKTOP-KCG9UOE with PID 16028 (C:\Users\ASUS\Desktop\pidev-dari\target\classes started by ASUS in C:\Users\ASUS\Desktop\pidev-dari)
-2021-04-03 21:51:06.765  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : No active profile set, falling back to default profiles: default
-2021-04-03 21:51:08.072  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-04-03 21:51:08.144  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
-2021-04-03 21:51:11.882  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-2021-04-03 21:51:11.883  INFO 16028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-03 21:51:11.884  INFO 16028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-04-03 21:51:11.920  INFO 16028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-03 21:51:11.920  INFO 16028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5123 ms
-2021-04-03 21:51:11.947  INFO 16028 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-04-03 21:51:11.963  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-56 - Starting...
-2021-04-03 21:51:11.978  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-56 - Start completed.
-2021-04-03 21:51:11.978  INFO 16028 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-04-03 21:51:14.354  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table order (id_ordere integer not null, naaame varchar(255), furniture_furniture_id integer, shopping_id_card integer, primary key (id_ordere)) engine=MyISAM" via JDBC Statement
+2021-04-09 00:23:09.141  WARN 16028 --- [HikariPool-127 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-127 - Thread starvation or clock leap detected (housekeeper delta=22h21m38s97ms112µs700ns).
+2021-04-09 00:45:36.929  INFO 16028 --- [Thread-634] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 00:45:36.931  INFO 16028 --- [Thread-634] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 00:45:36.937  INFO 16028 --- [Thread-634] com.zaxxer.hikari.HikariDataSource       : HikariPool-127 - Shutdown initiated...
+2021-04-09 00:45:36.950  INFO 16028 --- [Thread-634] com.zaxxer.hikari.HikariDataSource       : HikariPool-127 - Shutdown completed.
+2021-04-09 00:45:37.657  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : Starting PiedvDariApplication using Java 1.8.0_241 on DESKTOP-KCG9UOE with PID 16028 (C:\Users\ASUS\Desktop\pidev-dari\target\classes started by ASUS in C:\Users\ASUS\Desktop\pidev-dari)
+2021-04-09 00:45:37.658  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : No active profile set, falling back to default profiles: default
+2021-04-09 00:45:37.968  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 00:45:37.986  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2021-04-09 00:45:38.383  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-04-09 00:45:38.384  INFO 16028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-09 00:45:38.384  INFO 16028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-09 00:45:38.531  INFO 16028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-09 00:45:38.531  INFO 16028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 864 ms
+2021-04-09 00:45:38.604  INFO 16028 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 00:45:38.612  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-128 - Starting...
+2021-04-09 00:45:38.653  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-128 - Start completed.
+2021-04-09 00:45:38.655  INFO 16028 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-04-09 00:45:39.064  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table order (id_ordere integer not null, naaame varchar(255), furniture_furniture_id integer, shopping_id_card integer, primary key (id_ordere)) engine=MyISAM" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table order (id_ordere integer not null, naaame varchar(255), furniture_furniture_id integer, shopping_id_card integer, primary key (id_ordere)) engine=MyISAM" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
@@ -73,7 +70,7 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
 	... 40 common frames omitted
 
-2021-04-03 21:51:16.020  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table order add constraint FKorp24oldcf32huaivo7lt7qks foreign key (furniture_furniture_id) references furniture (furniture_id)" via JDBC Statement
+2021-04-09 00:45:40.180  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table order add constraint FKorp24oldcf32huaivo7lt7qks foreign key (furniture_furniture_id) references furniture (furniture_id)" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table order add constraint FKorp24oldcf32huaivo7lt7qks foreign key (furniture_furniture_id) references furniture (furniture_id)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
@@ -126,7 +123,7 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
 	... 39 common frames omitted
 
-2021-04-03 21:51:16.035  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table order add constraint FKjsr2jlqg5qmaifh9x4ge6r4bw foreign key (shopping_id_card) references shooping_card (id_card)" via JDBC Statement
+2021-04-09 00:45:40.187  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table order add constraint FKjsr2jlqg5qmaifh9x4ge6r4bw foreign key (shopping_id_card) references shooping_card (id_card)" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table order add constraint FKjsr2jlqg5qmaifh9x4ge6r4bw foreign key (shopping_id_card) references shooping_card (id_card)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
@@ -179,32 +176,32 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
 	... 39 common frames omitted
 
-2021-04-03 21:51:16.288  INFO 16028 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-04-03 21:51:16.288  INFO 16028 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-04-03 21:51:16.366  INFO 16028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-04-03 21:51:16.569  WARN 16028 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-04-03 21:51:16.593  INFO 16028 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-03 21:51:16.656  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
-2021-04-03 21:51:16.656  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : Started PiedvDariApplication in 10.034 seconds (JVM running for 385884.926)
-2021-04-03 21:51:16.656  INFO 16028 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-04-03 21:52:15.059  INFO 16028 --- [Thread-279] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-03 21:52:15.067  INFO 16028 --- [Thread-279] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-04-03 21:52:15.068  INFO 16028 --- [Thread-279] com.zaxxer.hikari.HikariDataSource       : HikariPool-56 - Shutdown initiated...
-2021-04-03 21:52:15.069  INFO 16028 --- [Thread-279] com.zaxxer.hikari.HikariDataSource       : HikariPool-56 - Shutdown completed.
-2021-04-03 21:52:15.256  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : Starting PiedvDariApplication using Java 1.8.0_241 on DESKTOP-KCG9UOE with PID 16028 (C:\Users\ASUS\Desktop\pidev-dari\target\classes started by ASUS in C:\Users\ASUS\Desktop\pidev-dari)
-2021-04-03 21:52:15.256  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : No active profile set, falling back to default profiles: default
-2021-04-03 21:52:15.381  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-04-03 21:52:15.397  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
-2021-04-03 21:52:15.522  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-2021-04-03 21:52:15.523  INFO 16028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-03 21:52:15.523  INFO 16028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-04-03 21:52:15.546  INFO 16028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-03 21:52:15.546  INFO 16028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 290 ms
-2021-04-03 21:52:15.577  INFO 16028 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-04-03 21:52:15.577  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-57 - Starting...
-2021-04-03 21:52:15.577  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-57 - Start completed.
-2021-04-03 21:52:15.577  INFO 16028 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-04-03 21:52:15.921  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table order (id_ordere integer not null, naaame varchar(255), furniture_furniture_id integer, shopping_id_card integer, primary key (id_ordere)) engine=MyISAM" via JDBC Statement
+2021-04-09 00:45:40.360  INFO 16028 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 00:45:40.360  INFO 16028 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 00:45:40.373  INFO 16028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-09 00:45:40.579  WARN 16028 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 00:45:40.633  INFO 16028 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 00:45:40.743  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-04-09 00:45:40.747  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : Started PiedvDariApplication in 3.309 seconds (JVM running for 828490.394)
+2021-04-09 00:45:40.749  INFO 16028 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-09 00:46:20.651  INFO 16028 --- [Thread-639] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 00:46:20.652  INFO 16028 --- [Thread-639] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 00:46:20.653  INFO 16028 --- [Thread-639] com.zaxxer.hikari.HikariDataSource       : HikariPool-128 - Shutdown initiated...
+2021-04-09 00:46:20.656  INFO 16028 --- [Thread-639] com.zaxxer.hikari.HikariDataSource       : HikariPool-128 - Shutdown completed.
+2021-04-09 00:46:21.014  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : Starting PiedvDariApplication using Java 1.8.0_241 on DESKTOP-KCG9UOE with PID 16028 (C:\Users\ASUS\Desktop\pidev-dari\target\classes started by ASUS in C:\Users\ASUS\Desktop\pidev-dari)
+2021-04-09 00:46:21.014  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : No active profile set, falling back to default profiles: default
+2021-04-09 00:46:21.230  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 00:46:21.246  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2021-04-09 00:46:21.382  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-04-09 00:46:21.385  INFO 16028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-09 00:46:21.385  INFO 16028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-09 00:46:21.394  INFO 16028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-09 00:46:21.394  INFO 16028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 374 ms
+2021-04-09 00:46:21.412  INFO 16028 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 00:46:21.412  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-129 - Starting...
+2021-04-09 00:46:21.452  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-129 - Start completed.
+2021-04-09 00:46:21.453  INFO 16028 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-04-09 00:46:21.663  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table order (id_ordere integer not null, naaame varchar(255), furniture_furniture_id integer, shopping_id_card integer, primary key (id_ordere)) engine=MyISAM" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table order (id_ordere integer not null, naaame varchar(255), furniture_furniture_id integer, shopping_id_card integer, primary key (id_ordere)) engine=MyISAM" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
@@ -258,7 +255,7 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
 	... 40 common frames omitted
 
-2021-04-03 21:52:35.049  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table order add constraint FKorp24oldcf32huaivo7lt7qks foreign key (furniture_furniture_id) references furniture (furniture_id)" via JDBC Statement
+2021-04-09 00:46:22.321  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table order add constraint FKorp24oldcf32huaivo7lt7qks foreign key (furniture_furniture_id) references furniture (furniture_id)" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table order add constraint FKorp24oldcf32huaivo7lt7qks foreign key (furniture_furniture_id) references furniture (furniture_id)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
@@ -311,7 +308,7 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
 	... 39 common frames omitted
 
-2021-04-03 21:52:35.057  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table order add constraint FKjsr2jlqg5qmaifh9x4ge6r4bw foreign key (shopping_id_card) references shooping_card (id_card)" via JDBC Statement
+2021-04-09 00:46:22.327  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table order add constraint FKjsr2jlqg5qmaifh9x4ge6r4bw foreign key (shopping_id_card) references shooping_card (id_card)" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table order add constraint FKjsr2jlqg5qmaifh9x4ge6r4bw foreign key (shopping_id_card) references shooping_card (id_card)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
@@ -364,32 +361,32 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
 	... 39 common frames omitted
 
-2021-04-03 21:52:35.485  INFO 16028 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-04-03 21:52:35.485  INFO 16028 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-04-03 21:52:35.501  INFO 16028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-04-03 21:52:35.563  WARN 16028 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-04-03 21:52:35.579  INFO 16028 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-03 21:52:35.610  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
-2021-04-03 21:52:35.610  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : Started PiedvDariApplication in 20.383 seconds (JVM running for 385963.888)
-2021-04-03 21:52:35.610  INFO 16028 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-04-03 21:53:04.064  INFO 16028 --- [Thread-284] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-04-03 21:53:04.070  INFO 16028 --- [Thread-284] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-04-03 21:53:04.070  INFO 16028 --- [Thread-284] com.zaxxer.hikari.HikariDataSource       : HikariPool-57 - Shutdown initiated...
-2021-04-03 21:53:04.071  INFO 16028 --- [Thread-284] com.zaxxer.hikari.HikariDataSource       : HikariPool-57 - Shutdown completed.
-2021-04-03 21:53:04.213  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : Starting PiedvDariApplication using Java 1.8.0_241 on DESKTOP-KCG9UOE with PID 16028 (C:\Users\ASUS\Desktop\pidev-dari\target\classes started by ASUS in C:\Users\ASUS\Desktop\pidev-dari)
-2021-04-03 21:53:04.213  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : No active profile set, falling back to default profiles: default
-2021-04-03 21:53:04.363  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-04-03 21:53:04.363  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
-2021-04-03 21:53:04.504  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-2021-04-03 21:53:04.504  INFO 16028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-04-03 21:53:04.504  INFO 16028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-04-03 21:53:04.520  INFO 16028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-04-03 21:53:04.520  INFO 16028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 307 ms
-2021-04-03 21:53:04.535  INFO 16028 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-04-03 21:53:04.535  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-58 - Starting...
-2021-04-03 21:53:04.535  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-58 - Start completed.
-2021-04-03 21:53:04.535  INFO 16028 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2021-04-03 21:53:04.788  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table order (id_ordere integer not null, naaame varchar(255), furniture_furniture_id integer, shopping_id_card integer, primary key (id_ordere)) engine=MyISAM" via JDBC Statement
+2021-04-09 00:46:22.500  INFO 16028 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 00:46:22.500  INFO 16028 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 00:46:22.507  INFO 16028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-09 00:46:22.571  WARN 16028 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 00:46:22.584  INFO 16028 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 00:46:22.607  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-04-09 00:46:22.610  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : Started PiedvDariApplication in 1.693 seconds (JVM running for 828532.257)
+2021-04-09 00:46:22.611  INFO 16028 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-09 00:48:00.907  INFO 16028 --- [Thread-644] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-09 00:48:00.909  INFO 16028 --- [Thread-644] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 00:48:00.910  INFO 16028 --- [Thread-644] com.zaxxer.hikari.HikariDataSource       : HikariPool-129 - Shutdown initiated...
+2021-04-09 00:48:00.912  INFO 16028 --- [Thread-644] com.zaxxer.hikari.HikariDataSource       : HikariPool-129 - Shutdown completed.
+2021-04-09 00:48:01.096  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : Starting PiedvDariApplication using Java 1.8.0_241 on DESKTOP-KCG9UOE with PID 16028 (C:\Users\ASUS\Desktop\pidev-dari\target\classes started by ASUS in C:\Users\ASUS\Desktop\pidev-dari)
+2021-04-09 00:48:01.096  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : No active profile set, falling back to default profiles: default
+2021-04-09 00:48:01.309  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-09 00:48:01.325  INFO 16028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2021-04-09 00:48:01.431  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2021-04-09 00:48:01.434  INFO 16028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-09 00:48:01.434  INFO 16028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-04-09 00:48:01.445  INFO 16028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-09 00:48:01.445  INFO 16028 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 347 ms
+2021-04-09 00:48:01.466  INFO 16028 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-09 00:48:01.468  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-130 - Starting...
+2021-04-09 00:48:01.473  INFO 16028 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-130 - Start completed.
+2021-04-09 00:48:01.473  INFO 16028 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-04-09 00:48:01.652  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table order (id_ordere integer not null, naaame varchar(255), furniture_furniture_id integer, shopping_id_card integer, primary key (id_ordere)) engine=MyISAM" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table order (id_ordere integer not null, naaame varchar(255), furniture_furniture_id integer, shopping_id_card integer, primary key (id_ordere)) engine=MyISAM" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
@@ -443,7 +440,7 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
 	... 40 common frames omitted
 
-2021-04-03 21:53:06.181  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table order add constraint FKorp24oldcf32huaivo7lt7qks foreign key (furniture_furniture_id) references furniture (furniture_id)" via JDBC Statement
+2021-04-09 00:48:02.274  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table order add constraint FKorp24oldcf32huaivo7lt7qks foreign key (furniture_furniture_id) references furniture (furniture_id)" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table order add constraint FKorp24oldcf32huaivo7lt7qks foreign key (furniture_furniture_id) references furniture (furniture_id)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
@@ -496,7 +493,7 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
 	... 39 common frames omitted
 
-2021-04-03 21:53:06.182  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table order add constraint FKjsr2jlqg5qmaifh9x4ge6r4bw foreign key (shopping_id_card) references shooping_card (id_card)" via JDBC Statement
+2021-04-09 00:48:02.277  WARN 16028 --- [restartedMain] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "alter table order add constraint FKjsr2jlqg5qmaifh9x4ge6r4bw foreign key (shopping_id_card) references shooping_card (id_card)" via JDBC Statement
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table order add constraint FKjsr2jlqg5qmaifh9x4ge6r4bw foreign key (shopping_id_card) references shooping_card (id_card)" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
@@ -549,14 +546,10 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.4.28.Final.jar:5.4.28.Final]
 	... 39 common frames omitted
 
-2021-04-03 21:53:06.432  INFO 16028 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-04-03 21:53:06.432  INFO 16028 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-04-03 21:53:06.432  INFO 16028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-04-03 21:53:06.495  WARN 16028 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-04-03 21:53:06.510  INFO 16028 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-04-03 21:53:06.542  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
-2021-04-03 21:53:06.542  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : Started PiedvDariApplication in 2.356 seconds (JVM running for 385994.821)
-2021-04-03 21:53:06.542  INFO 16028 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-04-03 21:54:06.028  INFO 16028 --- [http-nio-8084-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-04-03 21:54:06.029  INFO 16028 --- [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-04-03 21:54:06.031  INFO 16028 --- [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-09 00:48:02.397  INFO 16028 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-09 00:48:02.397  INFO 16028 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-09 00:48:02.404  INFO 16028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-09 00:48:02.477  WARN 16028 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-09 00:48:02.496  INFO 16028 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-09 00:48:02.527  INFO 16028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+2021-04-09 00:48:02.531  INFO 16028 --- [restartedMain] t.s.boot.piedvdari.PiedvDariApplication  : Started PiedvDariApplication in 1.455 seconds (JVM running for 828632.177)
