@@ -1,32 +1,39 @@
 package tp.spring.boot.piedvdari.entities;
 
 import java.io.Serializable;
-import java.util.List;
+
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
+
+
 @SuppressWarnings("serial")
 @Entity
 public class Order implements Serializable {
 	@Id
- private int id_order;
-	@OneToMany(mappedBy = "order")
-	private List<Furniture> listfurniture;
-	@OneToOne(mappedBy = "order")
+	@GeneratedValue(strategy=GenerationType.AUTO)
+ private int id_ordere;
+	private String naaame ;
+
+	@ManyToOne
+	private  Furniture furniture ;
+	@ManyToOne
 	private Shooping_Card shopping;
 
 	public Order() {
 		super();
 	}
 
-	public int getId_order() {
-		return id_order;
+	public String getNaaame() {
+		return naaame;
 	}
 
-	public void setId_order(int id_order) {
-		this.id_order = id_order;
+	public void setNaaame(String naaame) {
+		this.naaame = naaame;
 	}
-	
+
+
 }
