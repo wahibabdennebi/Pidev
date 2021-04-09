@@ -23,8 +23,8 @@ public class Costumer extends User {
 	private List<Borrower> listBorrow;
 	@OneToMany(mappedBy = "costumer")
 	private List<Claim>  listclaim;
-	@OneToMany(mappedBy = "costumer")
-	private List<Furniture> listfurniture;
+	//@OneToMany(mappedBy = "costumer")
+	//private List<Furniture> listfurniture;
 	public int getId_client() {
 		return id_client;
 	}

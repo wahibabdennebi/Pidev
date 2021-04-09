@@ -3,6 +3,8 @@ package tp.spring.boot.piedvdari.entities;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -10,6 +12,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Borrower implements Serializable {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id_borrower;
 	private int salaire;
 	@ManyToOne
@@ -32,6 +35,7 @@ public class Borrower implements Serializable {
 	public void setSalaire(int salaire) {
 		this.salaire = salaire;
 	}
+	
 	
 
 }
