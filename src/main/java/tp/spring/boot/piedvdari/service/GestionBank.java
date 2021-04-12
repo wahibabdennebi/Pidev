@@ -65,8 +65,8 @@ public class GestionBank implements IBankService {
        if (res <= 210.0){
 			
     	   SimpleMailMessage message = new SimpleMailMessage();
-			message.setTo("mariem.neji1@esprit.tn"); 
-			//message.setTo(bk.getMail()); 
+			//message.setTo("mariem.neji1@esprit.tn"); 
+			message.setTo(bkr.findById(idBank).get().getMail()); 
 			message.setSubject("Rappel"); 
 			message.setText("Vous devez changer le Taux d'intérêt");
 		   this.emailSender.send(message);

@@ -12,7 +12,7 @@ public interface IBorrowerService {
 	public Borrower updateBorrower(Borrower b);
 	public Borrower retrieveBorrower(int id);
 	public List<Borrower> retrieveAllBorrower();
-	public float capaciteEmprunt(int salaire,int idBank,int periode);
+	public float capaciteEmprunt(int idBorrower,int idBank,int periode);
 	//public float capaciteEmprunt15(int salaire,int idBank);
 
 

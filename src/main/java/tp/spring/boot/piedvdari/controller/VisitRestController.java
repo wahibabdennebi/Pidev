@@ -45,7 +45,7 @@ public class VisitRestController {
 		public Visit update(@RequestBody Visit v){
 			return visitserv.updateVisit(v);
 		}
-		//http://localhost:8082/SpringMVC/servlet/deleteVisit/2
+		//http://localhost:8082/SpringMVC/servlet/deleteVisit/1
 		@DeleteMapping("/deleteVisit/{id}")
 		public void delete(@PathVariable("id") int id_visit){
 			visitserv.deleteVisit(id_visit);

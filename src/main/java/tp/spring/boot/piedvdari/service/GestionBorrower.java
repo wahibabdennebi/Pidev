@@ -15,6 +15,8 @@ public class GestionBorrower implements IBorrowerService {
 	IBorrowerRepository br;
 	@Autowired
 	IBankRepository bkrep;
+	@Autowired
+	IBorrowerRepository borwrep;
 
 	@Override
 	public void ajouterBorrower(Borrower b) {
@@ -32,6 +34,7 @@ public class GestionBorrower implements IBorrowerService {
 	public Borrower updateBorrower(Borrower b) {
 		br.save(b);
 		return b ;
+		
 	}
 
 	@Override
@@ -45,8 +48,8 @@ public class GestionBorrower implements IBorrowerService {
 	}
 
 	@Override
-	public float capaciteEmprunt(int salaire,int idBank,int periode) {
-		return (float) ((salaire*0.4)-((salaire*0.4)*bkrep.findById(idBank).get().getTaux_int()/100))*(12*periode) ;
+	public float capaciteEmprunt(int idBorrower,int idBank,int periode) {
+		return (float) ((borwrep.findById(idBorrower).get().getSalaire()*0.4)-((borwrep.findById(idBorrower).get().getSalaire()*0.4)*bkrep.findById(idBank).get().getTaux_int()/100))*(12*periode) ;
 	}
 
 	

@@ -19,7 +19,7 @@ public class BorrowerRestController {
 	@Autowired
 	IBorrowerService borwserv;
 	
-	//http://localhost:8082/SpringMVC/servlet/ajouterBank
+	//http://localhost:8082/SpringMVC/servlet/ajouterBorrower
 		@PostMapping("/ajouterBorrower")
 		public Borrower addBorrower(@RequestBody Borrower br){
 			borwserv.ajouterBorrower(br);
@@ -48,10 +48,10 @@ public class BorrowerRestController {
 		public void delete(@PathVariable("id") int id_borrower){
 			borwserv.deleteBorrower(id_borrower);
 		}
-		//http://localhost:8082/SpringMVC/servlet/Capacite/4/1500/10
-		@GetMapping("/Capacite/{id}/{salaire}/{periode}")
-		public float capacite10(@PathVariable ("id") int id_Bank,@PathVariable ("salaire") int salaire,@PathVariable ("periode")int periode){
-			return  borwserv.capaciteEmprunt(salaire, id_Bank,periode);
+		//http://localhost:8082/SpringMVC/servlet/Capacite/2/4/10
+		@GetMapping("/Capacite/{idBorrower}/{idBank}/{periode}")
+		public float capacite10(@PathVariable ("idBorrower") int id_borrower,@PathVariable ("idBank") int id_Bank,@PathVariable ("periode")int periode){
+			return  borwserv.capaciteEmprunt(id_borrower, id_Bank,periode);
 			
 		}
 		

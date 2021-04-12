@@ -33,7 +33,7 @@ public class BankRestController {
 		return bankserv.retrieveAllBank();
 		
 	}
-	//http://localhost:8082/SpringMVC/servlet/getById/1
+	//http://localhost:8082/SpringMVC/servlet/getById/4
 	@GetMapping("/getById/{idBank}")
 	public Bank getById(@PathVariable ("idBank") int id_bank ){
 		return bankserv.retrieveBank(id_bank);
