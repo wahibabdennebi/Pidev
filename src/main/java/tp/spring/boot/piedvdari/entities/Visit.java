@@ -5,21 +5,35 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+
+
 @SuppressWarnings("serial")
 @Entity
 public class Visit implements Serializable{
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id_visit;
+	
 	@Temporal(TemporalType.DATE)
 	private Date date_visit;
 	private String description_feedback;
+	private String heure;
 	@ManyToMany
 	private List<Costumer> listCostumer;
+	
+	public String getHeure() {
+		return heure;
+	}
+	public void setHeure(String heure) {
+		this.heure = heure;
+	}
 	public Visit() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -42,6 +56,7 @@ public class Visit implements Serializable{
 	public void setDescription_feedback(String description_feedback) {
 		this.description_feedback = description_feedback;
 	}
+	
 	
 
 }
