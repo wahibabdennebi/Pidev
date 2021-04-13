@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>pack</title>
+    <bookmarks>
+        <bookmark name="pack" href="#pack"></bookmark>
+    </bookmarks>
+    <link rel="stylesheet" type="text/css" href="Pack.css"/>
+</head>
+
+<body>
+
+
+
+
+<div id="pack">
+    <div >
+        <table class="pack_table paginate-table">
+            <thead>
+            <tr>
+                <th>Id_pack</th>
+                <th>type_pack</th>
+                <th>price</th>
+                <th>date</th>
+                
+            </tr>
+            </thead>
+            <tbody>
+            <tr >
+                <td th:text="${pack?.id_pack}"></td>
+                <td th:text="${pack?.type_pack}"></td>
+                <td th:text="${pack?.price}"></td>
+                <td th:text="${pack?.date}"></td>
+            
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
