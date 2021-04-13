@@ -1,23 +1,31 @@
 package tp.spring.boot.piedvdari.entities;
 
 import java.io.Serializable;
-import java.util.Date;
 
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 
 @SuppressWarnings("serial")
 @Entity
 public class Ads implements Serializable {
 	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_ad;
 	private String title;
 	private	String description;
@@ -25,15 +33,22 @@ public class Ads implements Serializable {
 	private String adress;
 	private int area;
 	private int room ;
-	@Temporal(TemporalType.DATE)
+	private int num_Claim=0;
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date creationdate;
-	private String type_ads;
+	@Enumerated(EnumType.STRING)
+	private Type_ads type_ads;
 	@Enumerated(EnumType.STRING)
 	private Category category;
 	@Enumerated(EnumType.STRING)
 	private City city;
 	@ManyToOne
+	@JoinColumn(name="user_id" )
 	private User user;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="ad", fetch=FetchType.LAZY)
+	private List<Favorite_Ads> listeFavorite;
+	@OneToMany(mappedBy ="ads")
+	private List<Claim>claims ;
 	public int getId_ad() {
 		return id_ad;
 	}
@@ -70,27 +85,23 @@ public class Ads implements Serializable {
 	public void setArea(int area) {
 		this.area = area;
 	}
-	public Date getCreationdate() {
-		return creationdate;
-	}
-	public void setCreationdate(Date creationdate) {
-		this.creationdate = creationdate;
-	}
+	
+	
 	public int getRoom() {
 		return room;
 	}
 	public void setRoom(int room) {
 		this.room = room;
 	}
-	
-	
-	
-	public String getType_ads() {
-		return type_ads;
+	public int getNum_Claim() {
+		return num_Claim;
 	}
-	public void setType_ads(String type_ads) {
-		this.type_ads = type_ads;
+	public void setNum_Claim(int num_Claim) {
+		this.num_Claim = num_Claim;
 	}
+	
+	
+	
 	public Ads() {
 		super();
 	}
@@ -105,6 +116,62 @@ public class Ads implements Serializable {
 	}
 	public void setCity(City city) {
 		this.city = city;
+	}
+	
+
+		
+	public Ads(int id_ad, String title, String description, int price, String adress, int area, int room,
+			Date creationdate, Type_ads type_ads, Category category, City city, User user) {
+		super();
+		this.id_ad = id_ad;
+		this.title = title;
+		this.description = description;
+		this.price = price;
+		this.adress = adress;
+		this.area = area;
+		this.room = room;
+		this.creationdate = creationdate;
+		this.type_ads = type_ads;
+		this.category = category;
+		this.city = city;
+		this.user = user;
+	}
+	public Type_ads getType_ads() {
+		return type_ads;
+	}
+	public void setType_ads(Type_ads type_ads) {
+		this.type_ads = type_ads;
+	}
+	@JsonBackReference
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public Date getCreationdate() {
+		return creationdate;
+	}
+	public void setCreationdate(Date creationdate) {
+		this.creationdate = creationdate;
+	}
+	public Ads(int id_ad, String title, String description, int price, String adress, int area, int room,
+			Date creationdate, Type_ads type_ads, Category category, City city, User user,
+			List<Favorite_Ads> listeFavorite) {
+		super();
+		this.id_ad = id_ad;
+		this.title = title;
+		this.description = description;
+		this.price = price;
+		this.adress = adress;
+		this.area = area;
+		this.room = room;
+		this.creationdate = creationdate;
+		this.type_ads = type_ads;
+		this.category = category;
+		this.city = city;
+		this.user = user;
+		this.listeFavorite = listeFavorite;
 	}
 
 	
