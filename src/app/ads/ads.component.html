@@ -245,7 +245,7 @@
 
 
 <mat-grid-list     cols="3" rowHeight="600px" id="genepdf">
-  <mat-grid-tile *ngFor="let a of adslist | paginate: { itemsPerPage: 2, currentPage: page,totalItems:totalLength };let i=index">
+  <mat-grid-tile *ngFor="let a of adslist | paginate: { itemsPerPage: 3, currentPage: page,totalItems:totalLength };let i=index">
     <div>
     <img  class="img-responsive"   src="{{a.image}}">
       <p> city: {{a.city}} </p> 
